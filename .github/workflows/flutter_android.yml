@@ -27,4 +27,7 @@ jobs:
     - run: flutter pub get
     - run: flutter test
     - run: flutter build apk
+    - run: git add ./build/app/outputs/flutter-apk/app-release.apk
+    - run: git commit -m "release"
+    - run: git push origin master 
 #    - run: flutter build appbundle

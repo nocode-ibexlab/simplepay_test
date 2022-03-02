@@ -1,0 +1,72 @@
+name: simple_pay_flutter
+description: Simple Pay App.
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  redux: ^5.0.0
+  flutter_redux: ^0.8.2
+  dio: ^4.0.0
+  json_annotation: ^4.1.0
+  intl: ^0.17.0
+  auto_size_text: ^3.0.0
+  flutter_screenutil: ^5.0.0+2
+  flutter_svg: ^1.0.0
+  lottie: ^1.2.1
+  syncfusion_flutter_datepicker: ^19.4.42
+  dropdown_button2: ^1.1.1
+  get: ^4.6.1
+  syncfusion_flutter_datagrid: ^19.4.43
+  fsm2: ^2.0.7
+  mask_text_input_formatter: ^2.1.0
+  flutter_easylogger: ^2.3.3
+  flutter_html: ^3.0.0-alpha.2
+  lifecycle: ^0.4.3
+  simple_pay_api:
+    path: simple_pay_api
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  build_runner: ^2.1.2
+  json_serializable: ^5.0.2
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
+    - assets/fonts/
+    - assets/icons/outline/
+    - assets/icons/solid/
+    - assets/icons/png/
+    - assets/lotties/
+
+  fonts:
+    - family: UbuntuRegular
+      fonts:
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+
+    - family: UbuntuMedium
+      fonts:
+        - asset: assets/fonts/Ubuntu-Medium.ttf
+
+    - family: UbuntuBold
+      fonts:
+        - asset: assets/fonts/Ubuntu-Bold.ttf
+
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular-add-kr.ttf

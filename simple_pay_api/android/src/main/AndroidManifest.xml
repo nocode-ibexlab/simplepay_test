@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ibexlab.simple_pay_api">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- DKP809 장치용 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PRINTER_MODULE" />
+    <uses-permission android:name="android.permission.CPAYSDK_SYSTEM_MODULE" />
+    <uses-permission android:name="android.permission.CPAYSDK_QUICK_SCAN" />
+
+    <!-- 장치 관리자 -->
+    <uses-permission android:name="com.ibexlab.yoshop.permission.SYSTEM_SERVICE" />
+
+    <application>
+        <activity
+            android:name=".device.centerm.PinPadActivity"
+            android:theme="@style/PinPadTheme" />
+
+        <activity
+            android:name=".device.ml.barcode.BarcodeActivity"
+            android:theme="@style/BarcodeTheme" />
+
+        <service
+            android:name="com.ibexlab.simple_pay_api.device.DeviceManager"
+            android:permission="com.ibexlab.yoshop.permission.SYSTEM_SERVICE" />
+    </application>
+</manifest>

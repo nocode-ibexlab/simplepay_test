@@ -1,0 +1,48 @@
+group 'com.ibexlab.simple_pay_api'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+
+        // 1. K9 장치 지원: target api 는 19~22, support mode 는 false 여야 했음
+        // 2. arm64 지원: target api 를 19로 할 경우 64bit 지원하지 않는 것으로 보임
+        renderscriptTargetApi 22
+        renderscriptSupportModeEnabled false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.mlkit:barcode-scanning:17.0.2'
+    //https://github.com/evsinev/ber-tlv
+    implementation 'com.payneteasy:ber-tlv:1.0-11'
+}

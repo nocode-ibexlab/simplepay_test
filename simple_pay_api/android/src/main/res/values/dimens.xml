@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pin_pad_height">60dp</dimen>
+    <dimen name="pin_pad_height2">120dp</dimen>
+    <dimen name="barcode_focus_width">268dp</dimen>
+    <dimen name="barcode_focus_height">268dp</dimen>
+</resources>

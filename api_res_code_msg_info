@@ -1,0 +1,19 @@
+ 0: success
+-1: Fail to load data. Need to contact the administrator.
+-2: Fail to login. Login ID or password is empty.
+-3: Fail to login. Login ID or password is not correct.
+-4: Fail to register. The app is not registered. You must register the app then login again.
+-5: No license. The app has no license.
+-6: Fail to verify app integrity Currently not supported.
+
+
+
+All the Models must be edited! @JsonAnnotation(anyMap: true)  must be added.
+fromJson  and toJson must receive Map only not Map<String, dynamic>
+API call is simple by passing invokeMethod in GetRunApiFetchAction.
+ex: appStore.dispatch(GetRunApiFetchAction("sync.setAuth)
+
+The API result is handled by checking Map? res == null
+If any error occurs in the API, error is shown automatically.
+The result must be handled only! KEEP IN MIND PLEASE!
+

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".centerm.PinPadActivity">
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/num1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/num1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="1"
+        android:text="@string/num1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/num4"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/num2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="2"
+        android:text="@string/num2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num1"
+        app:layout_constraintEnd_toStartOf="@+id/num3"
+        app:layout_constraintStart_toEndOf="@+id/num1"
+        app:layout_constraintTop_toTopOf="@+id/num1" />
+
+    <Button
+        android:id="@+id/num3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="3"
+        android:text="@string/num3"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num2"
+        app:layout_constraintEnd_toStartOf="@+id/bs"
+        app:layout_constraintStart_toEndOf="@+id/num2"
+        app:layout_constraintTop_toTopOf="@+id/num2" />
+
+    <Button
+        android:id="@+id/bs"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height2"
+        android:background="@drawable/pin_pad_btn_bg_orange"
+        android:tag="bs"
+        android:text="@string/bs"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/num9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/num3"
+        app:layout_constraintTop_toTopOf="@+id/num3" />
+
+    <Button
+        android:id="@+id/num4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="4"
+        android:text="@string/num4"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/num7"
+        app:layout_constraintEnd_toStartOf="@+id/num5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/num5"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="5"
+        android:text="@string/num5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/num6"
+        app:layout_constraintStart_toEndOf="@+id/num4"
+        app:layout_constraintTop_toTopOf="@+id/num4" />
+
+    <Button
+        android:id="@+id/num6"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="6"
+        android:text="@string/num6"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num5"
+        app:layout_constraintEnd_toStartOf="@+id/bs"
+        app:layout_constraintStart_toEndOf="@+id/num5"
+        app:layout_constraintTop_toTopOf="@+id/num5" />
+
+    <Button
+        android:id="@+id/num7"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="7"
+        android:text="@string/num7"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/num8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/num8"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="8"
+        android:text="@string/num8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num7"
+        app:layout_constraintEnd_toStartOf="@+id/num9"
+        app:layout_constraintStart_toEndOf="@+id/num7"
+        app:layout_constraintTop_toTopOf="@+id/num7" />
+
+    <Button
+        android:id="@+id/num9"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="9"
+        android:text="@string/num9"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num8"
+        app:layout_constraintEnd_toStartOf="@+id/ok"
+        app:layout_constraintStart_toEndOf="@+id/num8"
+        app:layout_constraintTop_toTopOf="@+id/num8" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height2"
+        android:background="@drawable/pin_pad_btn_bg_blue"
+        android:tag="ok"
+        android:text="@string/ok"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/num0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/num9"
+        app:layout_constraintTop_toTopOf="@+id/num9" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_red"
+        android:tag="cancel"
+        android:text="@string/cancel"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/num0"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pin_pad_height"
+        android:background="@drawable/pin_pad_btn_bg_white"
+        android:tag="0"
+        android:text="@string/num0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/ok"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/cancel"
+        app:layout_constraintTop_toTopOf="@+id/cancel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

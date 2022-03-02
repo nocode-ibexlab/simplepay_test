@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+package api.v1;
+
+import "api/v1/message.proto";
+
+option java_package = "com.ibexlab.pos.api.v1";
+option java_outer_classname = "ServiceProto";
+option java_multiple_files = true;
+
+service BusinessService {
+    rpc GetNonce (Empty) returns (AppVerification) {
+    }
+
+    rpc VerifyApp (AppVerification) returns (AppVerification) {
+    }
+
+    rpc GetLoginDomains (Empty) returns (LoginDomain) {
+    }
+
+    rpc RegisterApp (AppRegistration) returns (AppRegistration) {
+    }
+
+    rpc GetRegistrationForm (RegistrationForm) returns (RegistrationForm) {
+    }
+
+    rpc VerifyAdminPassword (PasswordVerification) returns (PasswordVerification) {
+    }
+
+    rpc AllTables (LastModified) returns (S3File) {
+    }
+
+    rpc UploadSettings (SettingsData) returns (SettingsData) {
+    }
+
+    rpc UploadSales (SalesData) returns (SalesData) {
+    }
+
+    rpc UploadCashierData (CashierData) returns (CashierData) {
+    }
+
+    rpc UploadReports (ReportData) returns (ReportData) {
+    }
+
+    rpc SalesAndReportTables (Empty) returns (S3File) {
+    }
+
+    rpc ItemTables (LastModified) returns (ItemData) {
+    }
+    rpc EntranceRegistration (EntranceRegistrationData) returns (EntranceRegistrationData){
+
+    }
+}
+
+service ItemsService {
+    rpc InsertItemGroupCloud (stream ItemGroup) returns (stream ItemGroup) {
+    }
+
+    rpc InsertItemCloud (stream Item) returns (stream Item) {
+    }
+}
+
+service LogService {
+    rpc UploadLogCloud (stream LogMessage) returns (stream LogMessage) {
+    }
+
+    rpc UploadApprovalMasterCloud (stream PaymentApprovalMaster) returns (stream PaymentApprovalMaster) {
+    }
+
+    rpc UploadApprovalSrLogCloud (stream PaymentApprovalSrLog) returns (stream PaymentApprovalSrLog) {
+    }
+}
+
+service LicenseService {
+    rpc IssueLicense (IssueLicenseRequest) returns (IssueLicenseResponse);
+    rpc RequestPermission (RequestPermissionRequest) returns (RequestPermissionResponse);
+    rpc ConfirmPermission (ConfirmPermissionRequest) returns (ConfirmPermissionResponse);
+    rpc VerifyLicense (VerifyLicenseRequest) returns (VerifyLicenseResponse);
+    rpc GetLicenseList (GetLicenseListRequest) returns (GetLicenseListResponse);
+    rpc GetLicenseDetail (GetLicenseDetailRequest) returns (GetLicenseDetailResponse);
+    rpc UpdateLicenseInfo (UpdateLicenseInfoRequest) returns (UpdateLicenseInfoResponse);
+}
+
+service OrderService {
+    rpc HoldTableLock (TableLock) returns (TableLock);
+    rpc ReleaseTableLock (TableLock) returns (TableLock);
+    rpc PutOrder (OrderData) returns (OrderData);
+    rpc DeleteOrder (OrderData) returns (OrderData);
+    rpc GetOrders (OrderData) returns (OrderData);
+    rpc ListenOrder (stream OrderData) returns (stream OrderData);
+}
+
+service InventoryService {
+//    rpc Call (ASPApiRequest) returns (ASPApiResponse);
+    rpc BalanceItems (BalanceItemRequest) returns (BalanceItemResponse);
+    rpc ListAcceptanceItems (ListAcceptanceItemsRequest) returns (ListAcceptanceItemsResponse);
+    rpc AddAcceptanceItem (AddAcceptanceItemRequest) returns (AddAcceptanceItemResponse);
+    rpc UpdateAcceptanceItem (UpdateAcceptanceItemRequest) returns (UpdateAcceptanceItemResponse);
+    rpc DeleteAcceptanceItem (DeleteAcceptanceItemRequest) returns (DeleteAcceptanceItemResponse);
+    rpc DetailAcceptanceItem (DetailAcceptanceItemRequest) returns (DetailAcceptanceItemResponse);
+    rpc ListSupplier (ListSupplierRequest) returns (ListSupplierResponse);
+    rpc AddSupplier (AddSupplierRequest) returns (AddSupplierResponse);
+    rpc UpdateSupplier (UpdateSupplierRequest) returns (UpdateSupplierResponse);
+    rpc DeleteSupplier (DeleteSupplierRequest) returns (DeleteSupplierResponse);
+    rpc ListRevisionItems (ListRevisionItemsRequest) returns (ListRevisionItemsResponse);
+    rpc AddRevisionItems (AddRevisionItemsRequest) returns (AddRevisionItemsResponse);
+    rpc DetailRevisionItems (DetailRevisionItemsRequest) returns (DetailRevisionItemsResponse);
+}

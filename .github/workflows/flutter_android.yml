@@ -28,7 +28,7 @@ jobs:
     #- run: flutter test
     - run: flutter build apk
     - name: get Current Time
-      run: echo "NOW::$(date + '%Y%%d%H%M')" >> $GITHUB_ENV
+      run: echo "NOW::$(date + %Y%%d%H%M)" >> $GITHUB_ENV
     - run: cp ./build/app/outputs/flutter-apk/app-release.apk ./Simple_$NOW.apk
     - name: Upaload to gdrive
       #uses: adityak74/google-drive-upload-git-action@main

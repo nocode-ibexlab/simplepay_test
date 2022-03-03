@@ -11,8 +11,8 @@ on:
 #    tags: 'UAT*'
 #  create:
 #    tags: 'UAT*'
-#  pull_request:
-#    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:

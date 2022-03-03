@@ -9,7 +9,7 @@ on:
 #  push:
 #    branches: [ master ]
   push:
-    tags: 'UAT'
+    tags: 'UAT_*'
 #  pull_request:
 #    branches: [ master ]
 

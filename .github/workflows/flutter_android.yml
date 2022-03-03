@@ -7,8 +7,8 @@ name: Flutter_Android
 
 on:
   push:
-    branches: [ master ]
-#    tags: [ UAT ]
+#    branches: [ master ]
+    tags: UAT
 #  pull_request:
 #    branches: [ master ]
 

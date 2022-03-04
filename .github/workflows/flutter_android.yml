@@ -34,14 +34,9 @@ jobs:
     - run: 'echo "eee" >> ./releasefile/test.txt'
     ################################################################
     #Push Git
-    - name: Commit files
-      run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git commit -m "Add changes" -a
-    - run: cp ./build/app/outputs/flutter-apk/app-release.apk ./releasefile/UAT/uat-release.apk
-    - run: pwd
-    - run: ls -al ./releasefile/UAT/uat-release.apk
+    #- run: cp ./build/app/outputs/flutter-apk/app-release.apk ./releasefile/UAT/uat-release.apk
+    #- run: pwd
+    #- run: ls -al ./releasefile/UAT/uat-release.apk
     - name: push
       uses: github-actions-x/commit@v2.8
       with:
@@ -49,7 +44,8 @@ jobs:
         push-branch: 'master'
         commit-message: 'uat release'
         force-add: 'true'
-        files: ./releasefile/UAT/uat-release.apk
+        #files: ./releasefile/UAT/uat-release.apk
+        files: ./releasefile/text.txt
         name: Ibexlab-Webmaster
         email: webmaster@ibexlab.com
     ################################################################

@@ -40,8 +40,8 @@ jobs:
         commit-message: 'uat release'
         force-add: 'true'
         files: ./releasefile/UAT/uat-release.apk
-        name: Ibexlab-Webmaster
-        email: webmaster@ibexlab.com
+    #    name: Ibexlab-Webmaster
+    #    email: webmaster@ibexlab.com
     ################################################################
     #Push GDrive
     #- name: Upaload to gdrive

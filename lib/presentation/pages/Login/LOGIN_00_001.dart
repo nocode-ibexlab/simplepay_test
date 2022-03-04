@@ -116,7 +116,7 @@ const loginId = 'ID';
 const password = 'Пароль';
 const enterPassword = 'Введите пароль';
 const wrongCredentials = 'Неверный ID или пароль1';
-const enter = 'Enter2';
+const enter = 'Enter3';
 
 class NoInkScrollBehavior extends ScrollBehavior {
   @override

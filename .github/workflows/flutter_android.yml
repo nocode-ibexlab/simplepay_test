@@ -34,6 +34,8 @@ jobs:
     ################################################################
     #Push Git    
     - run: cp ./build/app/outputs/flutter-apk/app-release.apk ./release/UAT/uat-release.apk
+    - run: pwd
+    - run: ls -al ./release/UAT/uat-release.apk
     - name: push
       uses: github-actions-x/commit@v2.8
       with:
@@ -41,7 +43,7 @@ jobs:
         push-branch: 'master'
         commit-message: 'uat release'
         force-add: 'true'
-        files: release/UAT/uat-release.apk
+        files: ./release/UAT/uat-release.apk
         name: UATRelease
         email: heejung.lee@ibexlab.com 
     ################################################################

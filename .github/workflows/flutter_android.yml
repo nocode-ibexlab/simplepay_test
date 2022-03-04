@@ -40,7 +40,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'master'
         commit-message: 'uat release'
-        force-add: 'true'
+        force-push: 'true'
         files: ./releasefile/UAT/uat-release.apk
     #    name: Ibexlab-Webmaster
     #    email: webmaster@ibexlab.com
